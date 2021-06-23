@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 class students extends Model
 {
     use HasFactory, Notifiable;
-    public function Course_Student(){
-        return $this->belongsToMany('App\Models\courses');
+    public function CourseStudent(){
+        return $this->belongsToMany(courses::class);
     }
 }
