@@ -17,10 +17,8 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('img_path');
-            $table->string('email')->unique()->nullable();
-            $table->string('password')->nullable();
-            $table->rememberToken();
+            $table->string('course');
+            $table->string('email');
         });
     }
 
