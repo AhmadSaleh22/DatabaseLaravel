@@ -71,10 +71,10 @@ class StudentController extends Controller
      * @param  \App\Models\Students  $students
      * @return \Illuminate\Http\Response
      */
-    public function edit(Students $student)
+    public function edit(Students $students)
     {
         //
-        return view('students.edit',['students'=>$student]);
+        return view('students.edit',['students'=>$students]);
     }
 
     /**
@@ -84,7 +84,7 @@ class StudentController extends Controller
      * @param  \App\Models\Students  $students
      * @return \Illuminate\Http\Response
      */
-    public function update(Students $student)
+    public function update(Students $students)
     {
         //
         request()->validate([
@@ -92,7 +92,7 @@ class StudentController extends Controller
             'email' => 'required',
             'course' => 'required'
         ]);
-        $student->update([
+        $students->update([
             'name' => request('name'),
             'email' =>request('email'),
             'course' => request('course')
